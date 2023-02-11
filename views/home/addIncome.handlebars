@@ -1,0 +1,70 @@
+<div class="content-wrapper">
+    <div class="container-fluid">
+      <!-- Breadcrumbs-->
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item">
+          <a href="#">Dashboard</a>
+        </li>
+        <li class="breadcrumb-item active">Add Income</li>
+      </ol>
+      <!-- Example DataTables Card-->
+      
+         </div>
+          
+
+
+
+            <div class="card card-register mx-auto mt-5">
+    
+    <div class="card-body">
+        <form action="/addIncome/addInc" method="post">
+            <div class="form-group">
+                <div class="form-row">
+                    <div class="col-md-7">
+                        <label for="exampleInputName">Account</label>
+                        <select name="Account" class="form-control" id="userAccouont" required>
+                            <option value="">Please select Account....</option>
+                            {{#each myAccounts}}
+                                <option value="{{name}}">{{name}}</option>
+                            {{/each}} 
+                        </select>
+                    </div>
+                    <div class="col-md-7">
+                        <label for="exampleInputName">Amount</label>
+                        <input name="Amount" class="form-control" id="exampleInputName" type="number" aria-describedby="nameHelp" placeholder="Enter Amount" required='true'>
+                        
+                    </div>
+                    <div class="col-md-7">
+                        <label for="exampleInputName">Category</label>
+                        <select name="Category" class="form-control" id="userCategory" required>
+                            <option value="">Please select Category....</option>
+                            {{#each myCategorys}}
+                                <option value="{{Category}}">{{Category}}</option>
+                            {{/each}} 
+                        </select>
+                    </div>
+                    <div class="col-md-7">
+                        <label for="exampleInputName">Description</label>
+                        <input name="Desc" class="form-control" id="exampleInputName" type="text"  placeholder="Enter Description" required='true'>
+                    </div>
+                   
+                    
+                    
+                </div>
+            </div>
+             <button type="submit" class="btn btn-primary btn-block">Add</button>
+        </form>
+    </div>
+</div>
+
+
+
+
+
+          
+        <div class="card-body">
+          <div class="table-responsive">
+            
+          </div>
+        
+    </div>

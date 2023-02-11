@@ -1,0 +1,59 @@
+<div class="content-wrapper">
+    <div class="container-fluid">
+      <!-- Breadcrumbs-->
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item">
+          <a href="#">Dashboard</a>
+        </li>
+        <li class="breadcrumb-item active">Add Category</li>
+      </ol>
+     
+     
+      <!-- Message -->
+      {{#if message}}
+        <div class="alert alert-success">
+          {{message}}
+        </div>
+      {{/if}}
+      
+         </div>
+          
+
+
+
+            <div class="card card-register mx-auto mt-5">
+    
+    <div class="card-body">
+        <form action="/addCategory/addCategory" method="post">
+            <div class="form-group">
+                <div class="form-row">
+                    <div class="col-md-7">
+                        <label for="exampleInputName">Category</label>
+                        <input name="Category" class="form-control" id="exampleInputName" type="text" placeholder="Enter Category" required='true'>
+                    </div>
+                    <div class="col-md-7">
+                        <label for="exampleInputName">Type</label>
+                        <select name="Type" class="form-control" id="Type" required>
+                            <option value="">Please select type....</option>
+                            <option value="Income">Income</option>
+                            <option value="Income">Expense</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+             <button type="submit" class="btn btn-primary btn-block">Add</button>
+        </form>
+    </div>
+</div>
+
+
+
+
+
+          
+        <div class="card-body">
+          <div class="table-responsive">
+            
+          </div>
+        
+    </div>

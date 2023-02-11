@@ -1,0 +1,51 @@
+<div class="content-wrapper">
+    <div class="container-fluid">
+      <!-- Breadcrumbs-->
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item">
+          <a href="#">Dashboard</a>
+        </li>
+        <li class="breadcrumb-item active">Tables</li>
+      </ol>
+      <!-- Example DataTables Card-->
+      <!-- Message -->
+      {{#if message}}
+        <div class="alert alert-success">
+          {{message}}
+        </div>
+      {{/if}}
+      <div class="card mb-3">
+        <div class="card-header">
+          <i class="fa fa-table"></i>Accounts
+          <a href="/addAccount"><button style="margin-left: 40%" class="btn btn-info">Add Account</button></a>
+          </div>
+        <div class="card-body">
+          <div class="table-responsive">
+            <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+              <thead>
+                <tr>
+                  <tr>
+                  <th>ID</th>
+                  <th>Name</th>
+                  <th>Description</th>
+                  <th>Balance</th>
+                  <th>Date</th>
+                </tr>
+                </tr>
+              </thead>
+              <tbody>
+                  {{#each  Accounts}}
+                <tr>
+                  <td>{{_id}}</td>
+                  <td>{{name}}</td>
+                  <td>{{Desc}}</td>
+                  <td>{{balance}} $</td>
+                  <td>{{Date}}</td>
+                </tr>
+                {{/each}}
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>

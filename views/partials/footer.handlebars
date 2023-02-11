@@ -1,0 +1,258 @@
+<footer class="sticky-footer">
+      <div class="container">
+        <div class="text-center">
+          <small>Copyright © Your Website 2022</small>
+        </div>
+      </div>
+    </footer>
+
+
+      <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+      
+    <script>
+
+  //const month = ['Jan', 'Feb', 'April', 'March'];
+      
+  var months = [
+    {{ExpMonth}}
+  ];
+
+      for(var i = 0;  i <= months.length -1; i++) {
+      if(months[i] == 1) {
+   months[i] = 'January';
+     } else if (months[i] == 2) {
+   months[i] = 'Febuary';
+     } else if (months[i] == 3) {
+   months[i] = 'March';
+     } else if (months[i] == 4) {
+   months[i] = 'April';
+     } else if (months[i] == 5) {
+   months[i] = 'May';
+     } else if (months[i] == 6) {
+   months[i] = 'June';
+     } else if (months[i] == 7) {
+   months[i] = 'July';
+     } else if (months[i] == 8) {
+   months[i] = 'August';
+     } else if (months[i] == 9) {
+   months[i] = 'September';
+     } else if (months[i] == 10) {
+   months[i] = 'October';
+     } else if (months[i] == 11) {
+   months[i] = 'November';
+     } else if (months[i] == 12) {
+   months[i] = 'December';
+ }
+   console.log(months[i]);
+ 
+}
+
+  const data = {
+    labels: months,
+    datasets: [{
+      label: 'Income',
+      backgroundColor: 'rgb(55, 99, 32)',
+      borderColor: 'rgb(255, 99, 132)',
+      data: {{IncMonthData}},   
+    },
+    {
+      label: 'Expenses',
+      backgroundColor: 'rgb(255, 99, 132)',
+      borderColor: 'rgb(255, 99, 132)',
+      data: {{ExpMonthData}},   
+    }
+    
+
+    
+    
+    ]
+  };
+
+  
+
+  const config = {
+    type: 'bar',
+    data: data, 
+    options: {}
+  };
+</script>
+
+<script>
+  const myChart = new Chart(
+    document.getElementById('myChart'),
+    config
+  );
+</script>
+
+<script>
+  function CategoryLabels(data) {
+    for(var i = 0;  i <= data.length -1; i++) {
+        
+    }
+  }
+
+
+
+  //const Mydata = mapingLabel({{labelCate}});
+  //console.log(Mydata);
+
+  //const CategoryChartlabel = [];
+
+    /*
+    for(var i = 0;  i <= labelCate.length -1; i++) {
+    	CategoryChartlabel[i] = labelCate[i];
+    }
+    console.log('Here :',  labelCate);
+  */
+    function mapingLabel(Day) {
+      var data = Day.map(function(elem) {
+    return elem
+    });
+    return data;
+  };
+  
+  //var Mydatamapint = mapingLabel({{cateLabel}});
+  //console.log(Mydatamapint);
+  const labelData = []; 
+  
+
+    
+
+    var ilabel = [{{cateLabel}}].toString;
+    //ilabel.toString;
+    console.log(ilabel);
+  
+  
+        
+    
+
+  const mydata = {
+    labels: ilabel,
+    datasets: [{
+      label: 'Expenses',
+      backgroundColor: ['rgba(255, 99, 132, 0.2)',
+                    'rgba(54, 162, 235, 0.2)',
+                    'rgba(255, 206, 86, 0.2)',
+                    'rgba(75, 192, 192, 0.2)',
+                    'rgba(153, 102, 255, 0.2)',
+                    'rgba(255, 159, 64, 0.2)',
+                    'rgba(51, 204, 51,0.2)',
+                    'rgb(191, 191, 63,0.2)',
+                    'rgb(63, 127, 191 ,0.2)',
+                    'rgb(63, 191, 191,0.2)',
+                    'rgb(191, 63, 127,0.2)',
+                    'rgb(46, 91, 68,0.2)'],
+      borderColor: [ 'rgba(255,99,132,1)',
+                    'rgba(54, 162, 235, 1)',
+                    'rgba(255, 206, 86, 1)',
+                    'rgba(75, 192, 192, 1)',
+                    'rgba(153, 102, 255, 1)',
+                    'rgba(255, 159, 64, 1)',
+                    'rgba(51, 204, 51,1)',
+                    'rgb(191, 191, 63,1)',
+                    'rgb(63, 127, 191,1)',
+                    'rgb(63, 191, 191,1)',
+                    'rgb(191, 63, 127,1)',
+                    'rgb(46, 91, 68,1)'],
+      data: {{CategoryData}},   
+    },]
+  };
+                                 
+
+  const config1 = {
+    type: 'doughnut',
+    data: mydata, 
+    options: {}
+  };
+</script>
+
+<script>
+  const myChart1 = new Chart(
+    document.getElementById('categoryChart'),
+    config1
+  );
+</script>
+
+
+<script>
+
+var Dailymonths = [
+    {{dailyExpMonth}}
+  ];
+
+      for(var i = 0;  i <= Dailymonths.length -1; i++) {
+      if(Dailymonths[i] == 1) {
+   Dailymonths[i] = ' January';
+     } else if (Dailymonths[i] == 2) {
+   Dailymonths[i] = ' Febuary';
+     } else if (Dailymonths[i] == 3) {
+  Dailymonths[i] = ' March';
+     } else if (Dailymonths[i] == 4) {
+   Dailymonths[i] = ' April';
+     } else if (Dailymonths[i] == 5) {
+   Dailymonths[i] = ' May';
+     } else if (Dailymonths[i] == 6) {
+   Dailymonths[i] = ' June';
+     } else if (Dailymonths[i] == 7) {
+   Dailymonths[i] = ' July';
+     } else if (Dailymonths[i] == 8) {
+   Dailymonths[i] = ' August';
+     } else if (Dailymonths[i] == 9) {
+   Dailymonths[i] = ' September';
+     } else if (Dailymonths[i] == 10) {
+   Dailymonths[i] = ' October';
+     } else if (Dailymonths[i] == 11) {
+   Dailymonths[i] = ' November';
+     } else if (Dailymonths[i] == 12) {
+   Dailymonths[i] = ' December';
+ }
+   console.log(Dailymonths[i]);
+ 
+}
+
+const DailyDays = [
+  {{dailydays}}
+];
+
+const DailyChartlabel = [];
+
+for(var i = 0;  i <= Dailymonths.length -1; i++) {
+    	DailyChartlabel[i] = DailyDays[i] + Dailymonths[i];
+    }
+    console.log(DailyChartlabel);
+
+
+
+
+const data3 = {
+    labels: DailyChartlabel,
+    datasets: [{
+      label: 'Daily Expenses',
+      backgroundColor: 'rgb(255, 99, 132)',
+      borderColor: 'rgb(255, 99, 132)',
+      data: {{dailyExpData}},   
+    },   
+    ]
+  };
+
+  
+
+  const config2 = {
+    type: 'bar',
+    data: data3, 
+    options: {}
+  };
+</script>
+
+<script>
+  const myChart2 = new Chart(
+    document.getElementById('dailyExpChart'),
+    config2
+  );
+
+
+
+
+ // console.log('Data':, {{labelCate}});
+  </script>
+

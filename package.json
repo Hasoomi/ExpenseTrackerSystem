@@ -1,0 +1,31 @@
+{
+  "name": "poll",
+  "version": "1.0.0",
+  "description": "Real polling app",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "dev": "nodemon app.js"
+  },
+  "author": "Eng Hasoomi",
+  "license": "ISC",
+  "dependencies": {
+    "@handlebars/allow-prototype-access": "^1.0.5",
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.19.1",
+    "connect-flash": "^0.1.1",
+    "connect-mongodb-session": "^3.1.1",
+    "cors": "^2.8.5",
+    "express": "^4.17.2",
+    "express-handlebars": "^6.0.2",
+    "express-session": "^1.17.2",
+    "fetch": "^1.1.0",
+    "handlebars": "^4.7.7",
+    "jsonwebtoken": "^8.5.1",
+    "mongodb": "^4.3.1",
+    "mongoose": "^6.1.4",
+    "nodemailer": "^6.7.2",
+    "nodemon": "^2.0.15",
+    "pusher": "^5.0.0"
+  }
+}
